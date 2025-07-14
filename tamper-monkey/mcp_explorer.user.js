@@ -4,7 +4,7 @@
 // @version      2025-04-15
 // @description  try to take over the world!
 // @author       You
-// @match        http://localhost:6274/
+// @match        http://localhost:6274/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=undefined.localhost
 // @grant        none
 // ==/UserScript==
@@ -129,11 +129,15 @@
         const length = document.querySelector('[name="length"]');
         const address = document.querySelector('[name="address"]');
         const addressOrName = document.querySelector('[name="address_or_name"]');
+        const profileUuid = document.querySelector('[name="profile_uuid"]');
+        const url = document.querySelector('[name="url"]')
 
-        if (filename) textType(filename, 'zx-sync-sdk.exe.bndb')
+        if (filename) textType(filename, 'GameAssembly.dll.bndb')
         if (length) textType(length, '128')
-        if (address) textType(address, '0x141b42df0')
-        if (addressOrName) textType(addressOrName, '0x141b42df0')
+        if (address) textType(address, '0x00006ffff921d61e')
+        if (addressOrName) textType(addressOrName, '0x00006ffff921d61e')
+        if (profileUuid) textType(profileUuid, '0822bdeb3f874a52a8d93ac657adda8b')
+        if (url) textType(url, 'https://perplexity.ai')
 
     }
     // Add click event listener
